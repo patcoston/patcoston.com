@@ -1,0 +1,3 @@
+special search characters
+“        ”                ’       —       –        …
+&ldquo;  &rdquo;  &lsquo; &rsquo; &mdash; &ndash;
