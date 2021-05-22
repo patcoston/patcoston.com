@@ -1,0 +1,13 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>My Favorite Rush Albums and Songs</title>
+	<script src="/js/angular-1.6.3/angular.min.js"></script>
+	<script src="/js/rush.js"></script>
+</head>
+<body ng-app="RushApp" ng-controller="RushController">
+	<div ng-repeat="song in songs | orderBy: '-rating'">{{ song.rating }} - {{ song.album }} - {{ song.name }}</div>
+</body>
+</html>
