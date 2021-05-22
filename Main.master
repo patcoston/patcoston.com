@@ -1,0 +1,171 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+<!doctype html>
+<html lang="en">
+<head id="Head1" runat="server">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-16" /> 
+	<title>
+		<%=ConfigurationManager.AppSettings.GetValues("TitlePrefix")[0]%><asp:ContentPlaceHolder ID="TitleText" runat="server" />
+	</title>
+	<link rel="stylesheet" type="text/css" href="/css/main3.css" />
+	<link rel="stylesheet" type="text/css" href="/css/menu.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<asp:ContentPlaceHolder ID="HeadCode" runat="server" />
+	<script src="/js/jquery-3.5.0.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("a.MenuFolderLink").click(function () {
+				$(this).next("ul").slideToggle("fast");
+			});
+		});
+	</script>
+</head>
+<body>
+	<form id="form1" runat="server">
+	<h1 class="paddingLeft_100px">
+		<asp:ContentPlaceHolder ID="HeadingText" runat="server" />
+	</h1>
+	<div class="pageContainer">
+		<div class="pageNavigation">
+			<ul class="NavMenu">
+				<li><a href="javascript:void(0);" class="MenuFolderLink">+ Personal</a>
+					<ul style="display: none;" class="MenuFolder">
+					<li>
+						<a href="Javascript:void(0);" class="MenuFolderLink">+ Movies</a>
+						<ul style="display: none;" class="MenuFolder">
+						<li><a href="/home/movies.aspx">My Favorite Movies</a></li>
+						<li><a href="/home/allmovies.htm">Every one I've ever seen</a></li>
+						<li><a href="/home/futuremovie.aspx">SciFi movies that occur in a specific year</a></li>
+						<li><a href="http://patcostonmoviereviews.blogspot.com/2009/05/favorite-scifi-movies.html">My Favorite SciFi movies</a></li>
+						<li><a href="/home/netflix/default.aspx">My NetFlix Queues</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="Javascript:void(0);" class="MenuFolderLink">+ TV</a>
+						<ul style="display: none;" class="MenuFolder">
+						<li><a href="/home/tv.aspx">What I'm currently watching</a></li>
+						<li><a href="/home/tveveryshow.aspx">Shows that I've seen every episode</a></li>
+						<li><a href="/home/tvfaveps.aspx">Favorite episodes</a></li>
+						<li><a href="/home/tvstartrek.aspx">Favorite Star Trek episodes</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="Javascript:void(0);" class="MenuFolderLink">+ Music</a>
+						<ul style="display: none;" class="MenuFolder">
+						<li><a href="/home/music.aspx">My Favorite Bands</a></li>
+						<li><a href="/home/MusicSnapshot.aspx">What I'm currently listening to</a></li>
+						<li><a href="/home/thebeatles.aspx">All Beatles songs/albums rated</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="Javascript:void(0);" class="MenuFolderLink">+ Adventure</a>
+						<ul style="display: none;" class="MenuFolder">
+						<li><a href="/home/adventure/Travel.aspx">Places I want to travel</a></li>
+						<li><a href="/home/adventure/usa1.aspx">Driving Across America</a></li>
+						<li><a href="/home/adventure/helens1.aspx">Mt. Saint Helens: snowboarding</a></li>
+						<li><a href="/home/adventure/helens2.aspx">Mt. Saint Helens: hiking</a></li>
+						<li><a href="/home/adventure/runtheusa/default.aspx">Dave and Scott Run the USA</a></li>
+						<li>
+							<a href="javascript:void(0);" class="MenuFolderLink">+ My Adventures in Asia</a>
+							<ul style="display:none;">
+							<li><a href="/home/adventure/asia/wedding/default.aspx">My Wedding Photo Album</a></li>
+							<li><a href="http://kissho.blogspot.com/">Kelly's Wedding Photo Album</a></li>
+							<li><a href="http://www.flickr.com/photos/patcoston/">My Flickr photos</a></li>
+							<li><a href="http://www.flickr.com/photos/kissho/">My wife's Flickr photos</a></li>
+							<li><a href="/home/adventure/asia/images/news1.gif">Wedding Newspaper article 1</a></li>
+							<li><a href="/home/adventure/asia/images/news2.gif">Wedding Newspaper article 2</a></li>
+							<li><a href="/home/adventure/asia/images/news3.gif">Wedding Newspaper article 3</a></li>
+							<li><a href="/home/adventure/asia/images/news4.gif">Wedding Newspaper article 4</a></li>
+							<li><a href="/home/adventure/asia/gallery1/default.aspx">Photo Gallery 1</a></li>
+							<li><a href="/home/adventure/asia/gallery2/default.aspx">Photo Gallery 2</a></li>
+							<li><a href="/home/adventure/asia/gallery3/default.aspx">Photo Gallery 3</a></li>
+							<li><a href="/home/adventure/asia/gallery4/default.aspx">Photo Gallery 4</a></li>
+							<li><a href="/home/adventure/asia/gallery5/default.aspx">Photo Gallery 5</a></li>
+							<li><a href="/home/adventure/asia/gallery6/default.aspx">Photo Gallery 6</a></li>
+							<li><a href="/home/adventure/asia/gallery7/default.aspx">Photo Gallery 7</a></li>
+							<li><a href="http://patcoston.com/images/default.aspx?path=places/asia/malaysia/penang/telukkumbar">Photo Gallery Malaysia</a></li>
+							<li><a href="http://patcoston.com/images/default.aspx?path=places/Asia/Thailand/bangkok">Photo Gallery Thailand</a></li>
+							<li><a href="http://patcoston.com/images/default.aspx?path=places/Asia/Singapore/june2006">Photo Gallery Singapore</a></li>
+							<li><a href="http://patcoston.com/images/default.aspx?path=places/Asia/Indonesia/newyears2007/kidsonmotorbikes">Photo Gallery Indonesia</a></li>
+							<li><a href="/home/adventure/asia/impressions.aspx">Asian Adventure Blog 1</a></li>
+							<li><a href="http://patrick-james-coston-asian-adventures.blogspot.com/">Asian Adventure Blog 2</a></li>
+							<li><a href="/home/movies/MrMrsSmith/default.aspx">Bad English Pirated DVD</a></li>
+							<li><a href="/home/adventure/asia/congklak/default.aspx">Congklak (oldest game in the world) defeated</a></li>
+							</ul>
+						</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Javascript:void(0);" class="MenuFolderLink">+ Random</a>
+						<ul style="display:none;">
+						<li><a href="/default.aspx">Recent Updates</a></li>
+						<li><a href="/home/about.aspx">About Me</a></li>
+						<li><a href="/home/contact.aspx">Contact Me</a></li>
+						<li><a href="/home/lived.aspx">Where I have lived</a></li>
+						<li><a href="/home/lang.aspx">Languages I've tried to learn</a></li>
+						<li><a href="/home/people.aspx">Everyone I've ever Known (almost)</a></li>
+						<li><a href="/home/youtube.aspx">YouTube: Favorite Channels</a></li>
+						<li><a href="/home/pivotal.aspx">Pivotal People and Moments in my Life</a></li>
+						<li><a href="/images">My Photo Album</a></li>
+						<li><a href="/home/digitaldevices.aspx">My Digital Devices</a></li>
+						<li><a href="/home/links.aspx">My Links Page</a></li>
+						<li><a href="/home/gmaps.aspx">Google Map Favorites</a></li>
+						<li><a href="/home/faveBenAndJerrys.aspx">Rating Ben & Jerry's Flavors</a></li>
+						<li><a href="/StephenKing/StephenKing.aspx">Stephen King</a></li>
+						</ul>
+					</li>
+					</ul>
+				</li>
+				<li><a href="javascript:void(0);" class="MenuFolderLink">+ Games</a>
+					<ul style="display: none;" class="MenuFolder">
+						<li><a href="/games/portal2">Portal 2</a></li>
+						<li><a href="/co">SimCity 2000</a></li>
+						<li><a href="/sc2k">SimCity 2000 XTreme</a></li>
+						<li><a href="/st">SimTower</a></li>
+						<li><a href="/thesims">The SIMs</a></li>
+						<li><a href="/home/adventure/asia/congklak/default.aspx">Oldest game in the world defeated</a></li>
+						<li><a href="/home/wordsearch/default.aspx">World's Hardest Word Search Puzzles</a></li>
+						<li><a href="/games/WordGuess.aspx">World's Hardest Word Guess Game</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:void(0);" class="MenuFolderLink">+ Software</a>
+					<ul style="display: none;" class="MenuFolder">
+					<li><a href="/daymoon/pixmod.aspx">PixMod:</a> Pixel Modification: Easily write your own image manipulation software</li>
+					<li><a href="/daymoon/searchasp.aspx">Search ASP:</a> Searches all include files for a string in an ASP page</li>
+					<li><a href="/daymoon/parseasp.aspx">Parse ASP:</a> Parse ASP page to see all include files, Subs and Functions</li>
+					<li><a href="/daymoon/makepage.aspx">Make Page:</a> Make a web page out a text file.  Creates links out of URLs</li>
+					<li><a href="/daymoon/striphtml.aspx">Strip HTML:</a> Removes the HTML tags from a web page</li>
+					<li><a href="/daymoon/antidir.aspx">Anti Dir:</a> Opposite of dir command for command line</li>
+					<li><a href="/daymoon/textget.aspx">Text Get:</a> Extract the text from a non-text (binary file)</li>
+					<li><a href="/daymoon/stripend.aspx">Strip End:</a> Strip white-space (tabs and spaces) from the ends of each line in a text file</li>
+					</ul>
+				</li>
+				<li><a href="javascript:void(0);" class="MenuFolderLink">+ Misc</a>
+					<ul style="display: none;" class="MenuFolder">
+					<li><a href="/sitemap.aspx">Sitemap: Every Page on this site</a></li>
+					<li><a href="/domain/default.aspx">Domain Names</a> - my search for the perfect domain name</li>
+					<li><a href="/home/coolweb/default.aspx">Cool Web Stuff</a> - cool stuff I've seen or done on web pages</li>
+					<li><a href="/home/txt.aspx">Funny and Interesting Stuff</a></li>
+					<li><a href="/home/dvr.aspx">Tivo vs ReplayTV</a></li>
+					<li><a href="/tools/viewpics.aspx">Tool: View Photos</a> on another web site</li>
+					<li><a href="/tools/viewimages.aspx?path=/home/adventure/asia/Gallery8">Tool: View Images</a> on this web site</li>
+					<li><a href="/tools/datecalc.aspx">Tool: Date Math</a></li>
+					<li><a href="/tools/ntc.aspx">Tool: Name That Color</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="pageBody">
+			<asp:ContentPlaceHolder ID="BodyHTML" runat="server" />
+		</div>
+	</div>
+	<div class="clear">
+	</div>
+	<div class="pageDates">
+		<div>Date Created <asp:ContentPlaceHolder ID="CreatedDateText" runat="server" /></div>
+		<div>Last Updated <asp:ContentPlaceHolder ID="UpdatedDateText" runat="server" /></div>
+		Contact: patcoston@gmail.com
+	</div>
+	</form>
+</body>
+</html>
